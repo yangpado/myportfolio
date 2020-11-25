@@ -13,7 +13,6 @@
     --color-blue:#73aace;
     --color-yellow:#fff7d1;
     --color-orange:#feb546;
-    --color-black:#000000;
     --color-dg-orange:#FF914D;
     --color-dg-darkblue:#202F5A;
 
@@ -36,4 +35,30 @@
 /* universal tags */
 *{
     box-sizing:border-box;
+}
+
+/* Typography */
+h1{
+    font-size:var(--font-large);
+    font-weight: var(--weight-bold);
+    color:var(--color-black);
+    margin:16px 0;
+}
+h2{
+    font-size:var(--font-regular);
+    font-weight:var(--weight-semi-bold);
+    color:var(--color-black);
+    margin:8px 0;
+}
+h3{
+    font-size:var(--font-regular);
+    font-weight: var(--font-regular);
+    color:var(--color-black);
+    margin:8px 0;
+}
+p{
+    font-size:var(--font-regular);
+    font-weight: var(--font-regular);
+    color:var(--color-black);
+    margin:4px 0;
 }
