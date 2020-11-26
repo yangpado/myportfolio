@@ -7,6 +7,7 @@
     --color-pink:#fe918d;
     --color-dark-pink:#ff6863;
     --color-black:#4d4d4d;
+    --color-bblack:#000000;
     --color-dark-gray:#4d4d4d;
     --color-grey:#616161;
     --color-light-gray:#7c7979;
@@ -259,4 +260,91 @@ p{
     width:70%;
     height:3px;
     background-color: var(--color-orange);
+}
+/* work */
+.work_categories{
+    margin:40px;
+}
+.category_btn{
+    border:1px solid var(--color-dark-white);
+    border-radius:var(--size-border-radius)
+    font-size:var(--font-regular);
+    padding:8px 48px;
+}
+.category_btn.active,
+.category_btn:hover{
+    background-color: var(--color-pink);
+    color:var(--color-white);
+}
+.category_count{
+    border-radius:50%;
+    color:var(--color-white);
+    background-color: var(--color-orange);
+    width:24px;
+    height:24px;
+    display:inline-block;
+    line-height:24px;
+    position:relative;
+    top:-20px;
+    left:4px;
+    /* opacity:0; */
+    opacity:0;
+    transition:all var(--animation-duration) ease-in;
+}
+.category_btn.active .catecory_count,
+.category_btn:hover .category_count{
+    opacity:1;
+    top:0;
+}
+
+.work_projects{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+.project{
+    width:280px;
+    height:250px;
+    margin:2px;
+    background:var(--color-light-white);
+    position:relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.project_img{
+    max-width:100%;
+    max-height:100%;
+}
+.project_description{
+    position:absolute;
+    top:0;
+    left:0;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    background:var(--color-bblack);
+    opacity:0;
+    width:100%;
+    height:100%;
+    transition:all var(--animation-duration) ease-in;
+    transform:translateY(10px);
+}
+.project:hover .project_description{
+    opacity:0.8;
+    transform:translateY(0px);
+}
+.project_description h3{
+    color:var(--color-white);
+}
+.project_description h3::after{
+    content:'';
+    width:25px;
+    height:2px;
+    background-color: var(--color-dark-white);
+    display:block;
+    position:relative;
+    left:50%;
+    margin-left:-12px;
+    margin-top:8px;
 }
