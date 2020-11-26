@@ -154,6 +154,9 @@ p{
 .section{
     text-align:center;
     padding:50px;
+    margin:auto;
+}
+.section_container{
     max-width:1200px;
     margin:auto;
 }
@@ -210,4 +213,50 @@ p{
     display: block;
     margin-right: 16px;
     width: 130px;
+}
+
+/* skills */
+#skills{
+    background-color: var(--color-yellow);
+}
+.skillset{
+    display:flex;
+    background-color: var(--color-light-gray);
+    color:var(--color-light-white);
+    margin:20px 0;
+}
+.skillset_title{
+    color:var(--color-white);
+}
+.skillset_left{
+    flex-basis: 60%;
+    background-color: var(--color-dark-gray);
+    padding:20px 40px;
+}
+.skillset_right{
+    flex-basis: 40%;
+}
+.tools{
+    background-color: var(--color-grey);
+}
+.tools, .etc{
+    padding:20px;
+}
+.skill{
+    margin-bottom:32px;
+}
+.skill_description{
+    display:flex;
+    justify-content: space-between;
+}
+
+.skill_bar{
+    width:100%;
+    height:3px;
+    background-color: var(--color-grey);
+}
+.skill_value{
+    width:70%;
+    height:3px;
+    background-color: var(--color-orange);
 }
