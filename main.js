@@ -53,6 +53,28 @@ arrowUp.addEventListener('click',() => {
     scrollIntoView('#home');
 });
 
+//Project
+const workBtnContainer = document.querySelector('.work_categories');
+const projectContainer = document.querySelector('.work_projects');
+const projects = document.querySelector('.project');
+workBtnContainer.addEventListener('click',(e)=>{
+    const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+    if(filter == null) {
+        return;
+    }
+    console.log(filter);
+    projects.forEach((project) => {
+        console.log(project.dataset.type);
+        if(filter === '*' || filter === project.dataset.type){
+            project.classList.remove('invisible');
+        } else{
+            project.classList.add('invisible');
+        }
+    });
+    
+    
+});
+
 function scrollIntoView(selector){
     const scrollTo = document.querySelector(selector);
     scrollTo.scrollIntoView({behavior: "smooth"});

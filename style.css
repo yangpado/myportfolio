@@ -318,6 +318,9 @@ p{
     flex-wrap:wrap;
     justify-content: center;
 }
+.project.invisible{
+    display:none;
+}
 .project{
     width:280px;
     height:250px;
