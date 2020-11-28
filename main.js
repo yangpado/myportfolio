@@ -56,23 +56,27 @@ arrowUp.addEventListener('click',() => {
 //Project
 const workBtnContainer = document.querySelector('.work_categories');
 const projectContainer = document.querySelector('.work_projects');
-const projects = document.querySelector('.project');
+const projects = document.querySelectorAll('.project');
 workBtnContainer.addEventListener('click',(e)=>{
     const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
     if(filter == null) {
         return;
     }
-    console.log(filter);
-    projects.forEach((project) => {
-        console.log(project.dataset.type);
-        if(filter === '*' || filter === project.dataset.type){
-            project.classList.remove('invisible');
-        } else{
-            project.classList.add('invisible');
-        }
-    });
+    //console.log(filter);
+    projectContainer.classList.add('anim-out');
     
-    
+    setTimeout(() => {
+        
+        projects.forEach((project) => {
+            //console.log(project);
+            if(filter === '*' || filter === project.dataset.filter) {
+                project.classList.remove('invisible');
+            } else{
+                project.classList.add('invisible');
+            }
+        });
+        projectContainer.classList.remove('anim-out');
+    },300);
 });
 
 function scrollIntoView(selector){
