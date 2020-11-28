@@ -12,16 +12,24 @@ document.addEventListener('scroll', () => {
     }
 });
 
+
 // Handel scrolling when tapping on the navbar menu
-const navbarMenu = document.querySelector('.navbar_menu');
+const navbarMenu = document.querySelector('.navbar_menu_ul');
 navbarMenu.addEventListener('click',(event) => {
     const target = event.target;
     const link = target.dataset.link;
     if(link == null){
         return
     }
-
+    navbarMenu.classList.remove('open');
     scrollIntoView(link);
+});
+
+// navbar 토글버튼 
+const navbarToggleBtn = document.querySelector('.navbar_toggle_btn');
+navbarToggleBtn.addEventListener('click', () => {
+    navbarMenu.classList.toggle('open');
+    
 });
 
 // Handle click on Contact me button on home 
