@@ -62,6 +62,13 @@ workBtnContainer.addEventListener('click',(e)=>{
     if(filter == null) {
         return;
     }
+
+    // 새로 클릭된 객체에 active class 주기
+    const active = document.querySelector('.category_btn.selected');
+    active.classList.remove('selected');
+    const target = e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
+    target.classList.add('selected');
+
     //console.log(filter);
     projectContainer.classList.add('anim-out');
     
