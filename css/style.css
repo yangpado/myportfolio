@@ -16,6 +16,7 @@
     --color-orange:#feb546;
     --color-dg-orange:#FF914D;
     --color-dg-darkblue:#202F5A;
+    --color-light-blue:#F2F8FA;;
 
     /* font-size */
     --font-large:48px;
@@ -84,6 +85,7 @@ p{
     color:var(--color-black);
     margin:4px 0;
 }
+/* font-family: 'Noto Sans KR', sans-serif; */
 
 /* Navbar */
 #navbar{
@@ -93,7 +95,7 @@ p{
     justify-content: space-between;
     background-color: transparent;
     align-items:center;
-    padding:12px;
+    padding: 0px 16px;
     transition:all var(--animation-duration) ease-in-out;
     z-index:1;
 }
@@ -129,7 +131,7 @@ p{
 
 .navbar_menu_item:hover{
     border:1px solid var(--color-white);
-    background-color: var(--color-dark-pink);
+    background-color: var(--color-dg-darkblue);
     border-radius:var(--size-border-radius);
 }
 .navbar_toggle_btn{
@@ -143,10 +145,11 @@ p{
 
 /* Home */
 #home{
-    background:url(images/mymain_bg.png) center/cover no-repeat;
+    background:url(../images/mymain_bg.png) center/cover no-repeat;
     padding:40px;
     padding-top:120px;
     text-align:center;
+    position:relative;
 }
 .home_avatar{
     width:250px;
@@ -156,6 +159,7 @@ p{
 }
 .home_title, .home_description{
     color:var(--color-black);
+    padding-top:50px;
 }
 
 .home_contact{
@@ -166,6 +170,32 @@ p{
     border:2px solid var(--color-dg-darkblue);
     border-radius:4px;
     color:var(--color-dg-darkblue);
+}
+.home_contact:hover{
+    background-color: var(--color-dg-darkblue);
+    color:var(--color-white);
+}
+/* typed */
+#home .textW{
+	width: 530px;
+    font-size: 28px;
+    line-height: 40px;
+    position: absolute;
+    top: 396px;
+    left: 50%;
+    margin-left: -250px;
+    text-align:left;
+}
+.typed-cursor{
+	color:#202F5A;
+    margin-left:1px;
+    height:40px;
+}
+#home .ptitle{
+	color:var(--color-black);
+	font-weight:bold;
+	font-size:32px;
+	
 }
 
 /* section common */
@@ -180,68 +210,74 @@ p{
 }
 
 /* About */
+#about>p{
+    margin-bottom:48px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+#about>p>.boldtxt{
+    font-weight:bold;
+}
+.aboutme{
+    
+    display: flex;
+    align-items: center;
+    text-align: left;
+    justify-content: space-between;
+    color: var(--color-black);
+    line-height: 150%;
+    margin: 0 auto 80px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight:var(--font-medium);
+}
+.aboutme a{
+    color:var(--color-black);
+    text-decoration: underline;
+}
+
+
+.aboutme ul>li>i{
+    display:inline-block;
+	margin-right:10px;
+	text-align:center;
+	width:20px;
+}
+.motto{
+    width:240px;
+    height:240px;
+    padding:5px;
+}
+.motto img{
+    width:100%;
+    height:100%;
+}
+
+.profile_info{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+}
+.profile_career{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
 .about_majors{
     display:flex;
     justify-content:space-between;
-    margin:80px 0;
+    margin: 0 0 80px;
 }
-.major_icon{
-    width:170px;
-    height:170px;
-    font-size:70px;
-    line-height:170px;
-    margin:auto;
-    border:1px solid var(--color-blue);
-    border-radius:50%;
-    margin-bottom:16px;
-    color:var(--color-blue);
-    cursor:pointer;
-}
-.major_icon i{
-    transition:all 300ms ease;
-}
-.major_icon:hover i{
-    color:var(--color-pink);
-    transform:rotate(30deg) scale(1.1);
-}
-.major_title, .major_desctiption{
-    color:var(--color-dark-gray);
-}
-.major_desctiption{
-    font-size:var(--font-small);
-}
-.job{
-    display:flex;
-    align-items: center;
-}
-.job_desc{
-    margin:0 16px;
-    text-align:left;
-}
-.job_name, .job_period{
-    color:var(--color-light-gray);
-}
-.job_name{
-    font-size: var(--font-small);
-}
-.job_period{
-    font-size:var(--font-micro);
-}
-.job_logo{
-    display: block;
-    margin-right: 16px;
-    width: 130px;
-}
+
 
 /* skills */
 #skills{
-    background-color: var(--color-yellow);
+    background-color: var(--color-light-blue);
 }
 .skillset{
     display:flex;
     background-color: var(--color-light-gray);
     color:var(--color-light-white);
-    margin:20px 0;
+    margin:40px 0;
 }
 .skillset_title{
     color:var(--color-white);
@@ -277,6 +313,32 @@ p{
     width:70%;
     height:3px;
     background-color: var(--color-orange);
+}
+.major_icon{
+    width:170px;
+    height:170px;
+    font-size:70px;
+    line-height:170px;
+    margin:auto;
+    border:1px solid var(--color-blue);
+    border-radius:50%;
+    margin-bottom:16px;
+    color:var(--color-blue);
+    cursor:pointer;
+}
+.major_icon i{
+    transition:all 300ms ease;
+}
+.major_icon:hover i{
+    color:var(--color-pink);
+    transform:rotate(30deg) scale(1.1);
+}
+.major_title, .major_desctiption{
+    color:var(--color-dark-gray);
+}
+.major_desctiption{
+    font-size:var(--font-small);
+    font-family: 'Noto Sans KR', sans-serif;
 }
 /* work */
 .work_categories{
@@ -377,42 +439,89 @@ p{
     background-color: var(--color-dark-white);
 }
 
-/* Testimonial */
+/* Testimonial -> travel */
 #testimonials{
     background-color: var(--color-light-white);
 }
-.testimonials{
-    margin:40px;
+.tab_content{height:640px; overflow:hidden; margin:72px auto; position:relative;}
+.tab_content #gallery{
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin:-297px 0 0 -412px;
+	width:824px;
+	height:595px;
 }
-.testimonial{
-    display:flex;
-    margin:32px 0;
+#image{
+	width:760px;
+	height:470px;
+	margin:0 auto;	
 }
-.testimonial_avatar{
-    width:150px;
-    height:auto;
-    border-radius:50%;
+#image p{
+	display:none;
 }
-.testimonial_avatar:nth-child(odd){
-    margin-right:40px;
+#image p img{
+	width:760px;
+	height:470px;
 }
-.testimonial_avatar:nth-child(even){
-    margin-left:40px;
+#thumbnail{
+	position:relative;
+	width:824px;
+	height:95px;
+	margin-top:30px;
 }
-.testimonial_speech_bubble{
-    padding:18px;
-    background-color: var(--color-white);
+#thumbnail div{
+	float:left;
 }
-.testimonial_speech_bubble p{
-    color:var(--color-light-gray);
+#thumbnail img{
+	width:120px;
+	height:75px;
 }
-.testimonial_speech_bubble a{
-    color:var(--color-pink);
+#thumbnail .left,#thumbnail .right{
+	position:absolute;
+	top:36%;
+	width:33px;
+	height:33px;
+	text-align:center;
+	cursor:pointer;
+}
+#thumbnail .left img, #thumbnail .right img{
+	width:33px;
+	height:33px;
+}
+#thumbnail .left{
+	left:-10px;
+}
+#thumbnail .right{
+	right:-10px;
+}
+#thumbnail .container{
+	overflow:hidden;
+	position:relative;
+	left:33px;
+	width:760px;
+	height:95px;
+}
+#thumbnail ul{
+	position:absolute;
+	width:3072px; /* 120+8px = 128px * 6개 * 3덩어리 */
+	margin-left:-8px;
+}
+#thumbnail .container .thumb{
+	float:left;
+	width:120px;
+	height:95px;
+	margin-left:8px;
+	list-style:none;
+	cursor:pointer;
+}
+#thumbnail .container .thumb .ml0{
+	margin-left:0;
 }
 
 /* contact */
 #contact{
-    background-color: var(--color-pink);
+    background-color: var(--color-dg-darkblue);
 }
 .contact_title, .contact_email,.contact_rights{
     color:var(--color-white);
@@ -439,7 +548,7 @@ p{
     bottom:50px;
     right:50px;
     font-size:50px;
-    color:var(--color-dg-darkblue);
+    color:var(--color-dg-orange);
     opacity:0;
     transition:all 300ms ease-in;
     pointer-events:none;
@@ -458,22 +567,37 @@ p{
         flex-direction:column;
         align-items: flex-start;
         background-color: var(--color-dg-orange);
+        
     }
     .navbar_menu_ul{
         flex-direction:column;
         text-align:center;
-        width:100%;
         display:none;
+        margin:0 auto;
     }
     .navbar_menu_ul.open{
         display:block;
     }
+    #home .textW{
+        width:auto;
+        left:30px;
+        margin-left:0;
+    }
+    #home .ptitle{
+        font-size:20px;
+    }
+    .aboutme{
+        flex-direction: column;
+        width:auto;
+    }
 
     .about_majors{
         flex-direction:column;
+        width:100%;
     }
     .mjor{
         margin-bottom:32px;
+        width:auto;
     }
     .skillset{
         flex-direction:column;
@@ -481,8 +605,11 @@ p{
     .project{
         flex-grow:1;
     }
-    .testimonial_avatar{
-        width:80px;
-        height:80px;
+    #testimonials{
+        display:none;
+    }
+    .arrow_up{
+        bottom:8px;
+        right:0;
     }
 }

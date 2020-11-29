@@ -1,16 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hyunhwa's portfolio</title>
+    <title>양현화 포트폴리오</title>
     <meta name="description" content"hyunhwa's portfolio">
     <meta name="author" content"hyunhwa">
     <script src="https://kit.fontawesome.com/3b987ff125.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="icon" type="images/png" href="images/yangpado-logo.png">
-    <link rel="stylesheet" href="style.css">
-    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/script.js"></script>
+    <script src="js/typed.js"></script>
 
 </head>
 <body>
@@ -26,7 +31,7 @@
                 <li class="navbar_menu_item" data-link="#about">About</li>
                 <li class="navbar_menu_item" data-link="#skills">Skills</li>
                 <li class="navbar_menu_item" data-link="#work">Mywork</li>
-                <li class="navbar_menu_item" data-link="#testimonials">Testimonial</li>
+                <li class="navbar_menu_item" data-link="#testimonials">Travel</li>
                 <li class="navbar_menu_item" data-link="#contact">Contact</li>
             </ul>
         </div>
@@ -40,48 +45,42 @@
     <section id="home">
         <div class="home_container">
             <img src="images/profileImg.JPG" alt="메인img" class="home_avatar">
-            <h1 class="home_title">Hello, <br>I'm dream coder</h1>
-            <h2 class="home_description">디자인 할 수 있는 프론트앤드 개발자</h2>
+            <div class="textW">
+                <span class="ptitle"></span>
+            </div>
+            <h2 class="home_description"></h2>
             <button class="home_contact">contact</button>
         </div>
     </section>
     <!-- about -->
     <section id="about" class="section section_container">
         <h1>About me</h1>
-        <p>나에대한 설명</p>
-        <div class="about_majors">
-            <div class="mjor">
-                <div class="major_icon"><i class="fab fa-html5"></i></div>
-                <h2 class="major_title">HTML</h2>
-                <div class="major_desctiption">웹표준 구조적 마크업 정확히 이해</div>
+        <p>
+            오랫동안 여행과 밀접한 삶을 살다가, 현재는 웹상에서 여행중인 신입 퍼블리셔 양현화입니다. <br>
+            여행사에서 일하는동안 다양한 환경과 많은 사람들을 경험하였습니다. 새롭고 낯선 환경에  잘 적응할 수 있으며 <br><span class="boldtxt">"여행출발일"</span> 전에 모든것을 준비하는 시간관리에 능숙합니다. 
+            항상 배우는 자세로, 한결같이 열심히 하겠습니다.
+        </p>
+        <div class="aboutme">
+            <div class="motto">
+                <img src="images/logo_yang.png" alt="yanglogo">
             </div>
-            <div class="mjor">
-                <div class="major_icon"><i class="fab fa-css3-alt"></i></div>
-                <h2 class="major_title">CSS</h2>
-                <div class="major_desctiption">예쁘게 스타일링</div>
-            </div>
-            <div class="mjor">
-                <div class="major_icon"><i class="fab fa-js-square"></i></div>
-                <h2 class="major_title">JavaScript</h2>
-                <div class="major_desctiption">동적인 효과적용</div>
-            </div>
+            <ul class="profile_info">
+                    <li><i class="far fa-user"></i>양현화 (HyunHwa,Yang)</li>
+                    <li><i class="far fa-birthday-cake"></i>1990.07.11</li>
+                    <li><i class="far fa-home-alt"></i>서울시 강동구</li>
+                    <li><i class="far fa-envelope-open"></i><a href="mailto:yanghh711@gmail.com">yanghh711@gmail.com</a></li>
+                    <li><i class="fas fa-mobile-alt"></i><a href="tel:010-6252-4120">010-6252-4120</a></li>
+            </ul><!-- //.profile_info -->
+            <ul class="profile_career">
+                    <li><i class="far fa-briefcase"></i>여행박사 (2017.05 ~ 2019.10)</li>						
+                    <li><i class="far fa-briefcase"></i>허니문리조트 (2015.07 ~ 2017.02)</li>
+                    <li><i class="far fa-graduation-cap"></i>신구대학교 미디어콘텐츠과 졸업</li> 
+                    <li><i class="far fa-graduation-cap"></i>그린컴퓨터 아트학원 웹퍼블리싱 <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; UI/UX디자인 과정 수료</li>
+                    
+            </ul><!-- //.profile_career -->
         </div>
-        <div class="about_jobs">
-            <div class="job">
-                <img src="images/job1_img_logo.png" alt="여행박사" class="job_logo">
-                <div class="job_desc">
-                    <p class="job_name">여행박사</p>
-                    <p class="job_period">2017.05 ~ 2019.10</p>
-                </div>
-            </div>
-            <div class="job">
-                <img src="images/job2_logo.png" alt="허니문리조트" class="job_logo">
-                <div class="job_desc">
-                    <p class="job_name">허니문리조트</p>
-                    <p class="job_period">2015.07 ~ 2017.02</p>
-                </div>
-            </div>
-        </div>   
+        
+        
     </section>
     <!-- skills -->
     <section id="skills" class="section">
@@ -89,25 +88,24 @@
             <h1>Skills</h1>
             <h2>Skills & Attributes</h2>
             <p>
-                새로운걸 배울때 관심이 있고, 팀환경에 대해 
-                계획을 잘 세우고 잘 지킴
-            </p>
+                
+            </p> 
             <div class="skillset">
                 <div class="skillset_left">
-                    <h3 class="skillset_title">Skills</h3>
+                    <h3 class="skillset_title">My Skills</h3>
                     <div class="skill">
                         <div class="skill_description">
                             <span>HTML</span>
-                            <span>99 %</span>
+                            <span>100 %</span>
                         </div>
                         <div class="skill_bar">
-                            <div class="skill_value" style="width:99%;"></div>
+                            <div class="skill_value" style="width:100%;"></div>
                         </div>
                     </div>
                     <div class="skill">
                         <div class="skill_description">
                             <span>CSS</span>
-                            <span>99 %</span>
+                            <span>90 %</span>
                         </div>
                         <div class="skill_bar">
                             <div class="skill_value" style="width:90%;"></div>
@@ -124,20 +122,20 @@
                     </div>
                     <div class="skill">
                         <div class="skill_description">
-                            <span>DESIGN</span>
-                            <span>99 %</span>
+                            <span>Photoshop</span>
+                            <span>90 %</span>
                         </div>
                         <div class="skill_bar">
-                            <div class="skill_value" style="width:99%;"></div>
+                            <div class="skill_value" style="width:90%;"></div>
                         </div>
                     </div>
                     <div class="skill">
                         <div class="skill_description">
-                            <span>google</span>
-                            <span>99 %</span>
+                            <span>illustrator</span>
+                            <span>85 %</span>
                         </div>
                         <div class="skill_bar">
-                            <div class="skill_value"></div>
+                            <div class="skill_value" style="width:85%;"></div>
                         </div>
                     </div>
                 </div>
@@ -156,9 +154,39 @@
                         <h3 class="skillset_title">etc</h3>
                         <ul class="etc_list">
                             <li><span>Git</span></li>
-                            <li><span>design</span></li>
                             <li><span>memo</span></li>
                         </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="about_majors">
+                <div class="mjor">
+                    <div class="major_icon"><i class="fab fa-html5"></i></div>
+                    <h2 class="major_title">HTML</h2>
+                    <div class="major_desctiption">
+                        웹표준에 준수하며, <br>
+                        효율적인 코드를 설계합니다. <br>
+                        적절한 시멘틱 코드를 사용합니다.
+                    </div>
+                </div>
+                <div class="mjor">
+                    <div class="major_icon"><i class="fab fa-css3-alt"></i></div>
+                    <h2 class="major_title">CSS</h2>
+                    <div class="major_desctiption">
+                        CSS의 속성들을 정확히 이해하며, <br>
+                        원하는 요소를 선택하여 디자인의<br>
+                        의도에 맞게 코드를 작성합니다. <br>
+                        (flexbox,bootstrap 사용가능)
+                    </div>
+                </div>
+                <div class="mjor">
+                    <div class="major_icon"><i class="fab fa-js-square"></i></div>
+                    <h2 class="major_title">JavaScript</h2>
+                    <div class="major_desctiption">
+                        자바스크립트의 기본 문법을 <br>
+                        이해하고, 성능최적화를 고려하여  <br>
+                        적절한 코드를 사용합니다. <br>
+                        (jQuery 사용가능)
                     </div>
                 </div>
             </div>
@@ -239,40 +267,90 @@
     <!-- testimonials -->
     <section id="testimonials" class="section">
         <div class="section_container">
-            <h1>Testimonials</h1>
-            <h3>See what they say about me</h3>
-            <div class="testimonials">
-                <div class="testimonial">
-                    <img src="images/man.jpg" alt="people" class="testimonial_avatar">
-                    <div class="testimonial_speech_bubble">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque esse, consectetur facilis minus iure eum et quis illum ut quod.
-                        </p>
-                        <p class="name"><a href="#">내이름</a> /회사작성</p>
-                    </div>
-                </div>
-                <div class="testimonial">
-                    <div class="testimonial_speech_bubble">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque esse, consectetur facilis minus iure eum et quis illum ut quod.
-                        </p>
-                        <p class="name"><a href="#">내이름</a> /회사작성</p>
-                    </div>
-                    <img src="images/women.jpg" alt="people" class="testimonial_avatar">
-                </div>
-            </div>
+            <h1>My Travels</h1>
+            <div class="tab_content">
+                <div class="cont">
+                    <div id="gallery">
+                        <div id="image">
+                            <p style="display:block;"><img src="images/slideImg/cnx01.jpg" alt="slide01"/></p>
+                            <p><img src="images/slideImg/cnx02.jpg" alt="slide"/></p>
+                            <p><img src="images/slideImg/cnx03.jpg" alt="slide"/></p>
+                            <p><img src="images/slideImg/cnx04.jpg" alt="slide"/></p>
+                            <p><img src="images/slideImg/cnx05.jpg" alt="slide"/></p>
+                            <p><img src="images/slideImg/cnx06.jpg" alt="slide"/></p>
+                            <p><img src="images/slideImg/cun01.jpg" alt="slide"/></p>
+                            <p><img src="images/slideImg/cun02.jpg" alt="slide"/></p>
+                            <p><img src="images/slideImg/cun03.jpg" alt="slide"/></p>
+                            <p><img src="images/slideImg/cun04.jpg" alt="slide"/></p>
+                            <p><img src="images/slideImg/cun05.jpg" alt="slide"/></p>
+                            <p><img src="images/slideImg/cun06.jpg" alt="slide"/></p>
+                            <p><img src="images/slideImg/nyc01.jpg" alt="slide"/></p>
+                            <p><img src="images/slideImg/nyc02.jpg" alt="slide"/></p>
+                            <p><img src="images/slideImg/nyc03.jpg" alt="slide"/></p>
+                            <p><img src="images/slideImg/nyc04.jpg" alt="slide"/></p>
+                            <p><img src="images/slideImg/nyc05.jpg" alt="slide"/></p>
+                            <p><img src="images/slideImg/nyc06.jpg" alt="slide"/></p>
+                            <p><img src="images/slideImg/por01.jpg" alt="slide"/></p>
+                            <p><img src="images/slideImg/por02.jpg" alt="slide"/></p>
+                            <p><img src="images/slideImg/por03.jpg" alt="slide"/></p>
+                            <p><img src="images/slideImg/por04.jpg" alt="slide"/></p>
+                            <p><img src="images/slideImg/por05.jpg" alt="slide"/></p>
+                            <p><img src="images/slideImg/por06.jpg" alt="slide"/></p>
+                        </div>
+                        <div id="thumbnail">
+                            <div class="left">
+                                <span><img src="images/slideImg/left-arrow.png" alt="left"/></span>
+                            </div>
+                            <div class="container">
+                                <ul>
+                                    <li class="thumb"><img src="images/slideImg/cnx01.jpg" alt="thumbnail img"/></li>
+                                    <li class="thumb"><img src="images/slideImg/cnx02.jpg" alt="thumbnail img"/></li>
+                                    <li class="thumb"><img src="images/slideImg/cnx03.jpg" alt="thumbnail img"/></li>
+                                    <li class="thumb"><img src="images/slideImg/cnx04.jpg" alt="thumbnail img"/></li>
+                                    <li class="thumb"><img src="images/slideImg/cnx05.jpg" alt="thumbnail img"/></li>
+                                    <li class="thumb"><img src="images/slideImg/cnx06.jpg" alt="thumbnail img"/></li>
+                                    <li class="thumb ml0"><img src="images/slideImg/cun01.jpg" alt="thumbnail img"/></li>
+                                    <li class="thumb"><img src="images/slideImg/cun02.jpg" alt="thumbnail img"/></li>
+                                    <li class="thumb"><img src="images/slideImg/cun03.jpg" alt="thumbnail img"/></li>
+                                    <li class="thumb"><img src="images/slideImg/cun04.jpg" alt="thumbnail img"/></li>
+                                    <li class="thumb"><img src="images/slideImg/cun05.jpg" alt="thumbnail img"/></li>
+                                    <li class="thumb"><img src="images/slideImg/cun06.jpg" alt="thumbnail img"/></li>
+                                    <li class="thumb ml0"><img src="images/slideImg/nyc01.jpg" alt="thumbnail img"/></li>
+                                    <li class="thumb"><img src="images/slideImg/nyc02.jpg" alt="thumbnail img"/></li>
+                                    <li class="thumb"><img src="images/slideImg/nyc03.jpg" alt="thumbnail img"/></li>
+                                    <li class="thumb"><img src="images/slideImg/nyc04.jpg" alt="thumbnail img"/></li>
+                                    <li class="thumb"><img src="images/slideImg/nyc05.jpg" alt="thumbnail img"/></li>
+                                    <li class="thumb"><img src="images/slideImg/nyc06.jpg" alt="thumbnail img"/></li>
+                                    <li class="thumb ml0"><img src="images/slideImg/por01.jpg" alt="thumbnail img"/></li>
+                                    <li class="thumb"><img src="images/slideImg/por02.jpg" alt="thumbnail img"/></li>
+                                    <li class="thumb"><img src="images/slideImg/por03.jpg" alt="thumbnail img"/></li>
+                                    <li class="thumb"><img src="images/slideImg/por04.jpg" alt="thumbnail img"/></li>
+                                    <li class="thumb"><img src="images/slideImg/por05.jpg" alt="thumbnail img"/></li>
+                                    <li class="thumb"><img src="images/slideImg/por06.jpg" alt="thumbnail img"/></li>
+                                </ul>
+                            </div>
+                            <div class="right">
+                                <span><img src="images/slideImg/right-arrow.png" alt="right"/></span>
+                            </div>
+                        </div>
+                    </div><!-- //#gallery -->
+                </div><!-- //.cont -->
+            </div><!-- //.tab_content -->
         </div>
     </section>
     <!-- contact -->
     <section id="contact" class="section">
         <h1 class="contact_title">Let's talk</h1>
-        <h3 class="contact_email">yanghh711@gmail.com</h3>
+        <h3 class="contact_email"><a href="mailto:yanghh711@gmail.com">yanghh711@gmail.com</a></h3>
         <div class="contact_links">
-            <a href="#" target="_blank">
+            <a href="https://github.com/yangpado" target="_blank">
                 <i class="fab fa-github"></i>
             </a>
-            <a href="#" target="_blank">
+            <a href="https://blog.naver.com/yanghh711" target="_blank">
                 <i class="fab fa-blogger-b"></i>
+            </a>
+            <a href="https://blog.naver.com/yanghh711" target="_blank">
+                <i class="fab fa-instagram"></i>
             </a>
         </div>
         <p class="contact_rights">2020 yanghyunhwa portfolio - All rights reserved</p>
