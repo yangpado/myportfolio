@@ -47,9 +47,5 @@ $(function(){
 	$(window).scroll(function(){
 		var sct=$(window).scrollTop();
 		var skillset=$('#skills').offset();
-		if(sct > skillset.top-150){
-			
-		}
-
-	})
+		
 });
