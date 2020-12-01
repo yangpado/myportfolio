@@ -136,7 +136,7 @@ p{
 }
 .navbar_toggle_btn{
     position:absolute;
-    top:44px;
+    top:18px;
     right:32px;
     font-size:24px;
     color:var(--color-white);
@@ -291,6 +291,163 @@ p{
 .skillset_right{
     flex-basis: 40%;
 }
+
+/*-------- Skill ---------*/
+.skill-thumb strong,
+.skill-thumb p {
+    color: #ffffff;
+    font-size: 16px;
+    padding-bottom: 8px;
+    display: inline-block;
+}
+
+.skill-thumb .progress {
+    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: none;
+    height: 4px;
+}
+
+.skill-thumb .progress-bar-primary {
+    background: #C1C3E7
+}
+
+.skill {
+    overflow: hidden;
+    width: 100%;
+    margin: 3em auto;
+    padding-top: 36px;
+}
+
+.skill .progress {
+    background-color: #ddd;
+    border-radius: 3px;
+    box-shadow: none;
+    height: 5px;
+    overflow: visible;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.skill .progress .pro_title {
+    left: 0;
+    position: absolute;
+    top: -27px;
+    z-index: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 13px;
+	text-align:left;
+}
+
+.skill .progress .progress-bar {
+    background-color: #FF914D;
+    border-radius: 3px;
+    box-shadow: none;
+    height: 5px;
+    position: relative;
+    text-align: right;
+}
+
+.skill .progress-bar p {
+    background-color: #FF914D;
+    margin-top: -26px;
+    margin-left: -48px;
+    padding: 0 5px;
+    -webkit-animation-delay: 3s;
+    animation-delay: 3s;
+    position: absolute;
+    letter-spacing: 1px;
+    font-weight: 400;
+    line-height: 1.3;
+}
+.skill .progress-bar p.mgshort{
+	margin-left:-54px;
+}
+.skill .progress-bar > p:before,
+.skill .progress-bar > p:after {
+    border: medium solid transparent;
+    content: " ";
+    height: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 100%;
+    width: 0;
+}
+
+.skill .progress-bar > p:before {
+    border-top-color: #FF914D;
+    border-width: 5px;
+    margin-left: 30px;
+    top: 20px;
+}
+
+
+@-webkit-keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+          animation-name: fadeInLeft;
+}
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+          animation-name: fadeInUp;
+}
 .tools{
     background-color: var(--color-grey);
 }
@@ -298,7 +455,7 @@ p{
     padding:20px;
 }
 .skill{
-    margin-bottom:32px;
+    margin-bottom:16px;
 }
 .skill_description{
     display:flex;
@@ -354,7 +511,7 @@ p{
 }
 .category_btn.selected,
 .category_btn:hover{
-    background-color: var(--color-pink);
+    background-color: var(--color-dg-darkblue);
     color:var(--color-white);
 }
 .category_count{

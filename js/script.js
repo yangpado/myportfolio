@@ -43,5 +43,13 @@ $(function(){
 		loop:true, 
 		
 	})
-	
+	/* 스크롤 이벤트 발생시 skillset 실행*/
+	$(window).scroll(function(){
+		var sct=$(window).scrollTop();
+		var skillset=$('#skills').offset();
+		if(sct > skillset.top-150){
+			
+		}
+
+	})
 });
