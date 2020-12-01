@@ -278,7 +278,7 @@ p{
     display:flex;
     background-color: var(--color-light-gray);
     color:var(--color-light-white);
-    margin:40px 0;
+    margin:80px 0;
 }
 .skillset_title{
     color:var(--color-white);
@@ -349,7 +349,7 @@ p{
     border:1px solid var(--color-dark-white);
     border-radius:var(--size-border-radius)
     font-size:var(--font-regular);
-    padding:8px 48px;
+    padding:12px 48px;
     width:176px;
 }
 .category_btn.selected,
