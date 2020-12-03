@@ -42,10 +42,16 @@ $(function(){
 		backDelay:200, 
 		loop:true, 
 		
-	})
-	/* 스크롤 이벤트 발생시 skillset 실행*/
+	});
+	
+	// skill 이벤트
 	$(window).scroll(function(){
 		var sct=$(window).scrollTop();
-		var skillset=$('#skills').offset();
+		var skillset=$('#skills').offset().top;
+		if(sct>skillset){
+			$('#skills').addClass('fade')
+		}
+		
+	})
 		
 });
