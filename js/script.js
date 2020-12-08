@@ -43,15 +43,7 @@ $(function(){
 		loop:true, 
 		
 	});
+
 	
-	// skill 이벤트
-	$(window).scroll(function(){
-		var sct=$(window).scrollTop();
-		var skillset=$('#skills').offset().top;
-		if(sct>skillset){
-			$('#skills').addClass('fade')
-		}
-		
-	})
-		
 });
+

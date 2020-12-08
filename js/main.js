@@ -12,6 +12,18 @@ document.addEventListener('scroll', () => {
     }
 });
 
+//scroll event
+const skille = document.querySelector('#skills');
+const skillHeight = skille.getBoundingClientRect().height;
+document.addEventListener('scroll', () => {
+    if(window.scrollY > skillHeight){
+        skille.classList.add('fadeInLeft');
+    } else{
+        skille.classList.remove('fadeInLeft');
+    }
+
+})
+
 
 // Handel scrolling when tapping on the navbar menu
 const navbarMenu = document.querySelector('.navbar_menu_ul');
