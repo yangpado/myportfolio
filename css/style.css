@@ -723,6 +723,14 @@ p{
 
 /* For below 768px screen width  */
 @media screen and (max-width:768px){
+    :root {
+        /* font-size */
+        --font-large:30px;
+        --font-medium:18px;
+        --font-regular:16px;
+        --font-small:14px;
+        --font-micro:12px;
+    }
     .navbar_toggle_btn{
         display:block;
     }
@@ -752,6 +760,7 @@ p{
     .aboutme{
         flex-direction: column;
         width:auto;
+        margin: 0 auto 32px;
     }
 
     .about_majors{
