@@ -733,6 +733,9 @@ p{
     }
     .navbar_toggle_btn{
         display:block;
+        top:16px;
+        right:16px;
+        font-size:var(--font-medium);
     }
     #navbar{
         flex-direction:column;
@@ -781,7 +784,11 @@ p{
         display:none;
     }
     .arrow_up{
-        bottom:8px;
-        right:0;
+        bottom:16px;
+        right:16px;
+        width:50px;
+        height:50px;
+        font-size:30px;
+        line-height:50px;
     }
 }
