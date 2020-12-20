@@ -125,10 +125,10 @@ p{
     cursor:pointer;
     border-radius:var(--size-border-radius);
     border:1px solid transparent;
-    
-
 }
-
+.navbar_menu_item.active{
+    border:1px solid var(--color-white);
+}
 .navbar_menu_item:hover{
     border:1px solid var(--color-white);
     background-color: var(--color-dg-darkblue);
